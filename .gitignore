@@ -1,0 +1,19 @@
+.env
+git rm -r --cached .env 2>/dev/null || true
+
+cat > .gitignore << 'EOF'
+# Secrets & env
+.env
+*.env
+.env.*
+
+# Python cache/venv
+__pycache__/
+*.pyc
+.venv/
+backend/.venv/
+
+# OS/IDE
+.DS_Store
+.vscode/
+.idea/
